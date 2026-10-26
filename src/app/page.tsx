@@ -6,6 +6,7 @@ import { HowItWorks } from '@/components/sections/HowItWorks';
 import { Reviews } from '@/components/sections/Reviews';
 import { FAQ } from '@/components/sections/FAQ';
 import { Footer } from '@/components/layout/Footer';
+import { Introduction } from '@/components/sections/Introduction';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <main className="flex flex-col w-full min-h-screen">
         <Hero />
+        <Introduction />
         <Features />
         <MediaShowcase />
         <HowItWorks />

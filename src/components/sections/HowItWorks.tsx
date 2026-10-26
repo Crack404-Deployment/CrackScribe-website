@@ -247,7 +247,7 @@ export const HowItWorks = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="how-it-works" className="py-32 px-6 relative z-10 bg-[#000000]">
+    <section id="how-it-works" className="py-24 md:py-32 px-6 md:px-12 lg:px-20 relative z-10 bg-[#000000]">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}

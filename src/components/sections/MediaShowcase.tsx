@@ -70,7 +70,7 @@ export const MediaShowcase = () => {
   }, []);
 
   return (
-    <section id="media" className="py-32 px-6 relative z-10 bg-[#020202]">
+    <section id="media" className="py-24 md:py-32 px-6 md:px-12 lg:px-20 relative z-10 bg-[#020202]">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto">

@@ -33,7 +33,7 @@ export const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-32 px-6 relative z-10 bg-[#000000]">
+    <section id="faq" className="py-24 md:py-32 px-6 md:px-12 lg:px-20 relative z-10 bg-[#000000]">
       <div className="max-w-4xl mx-auto">
         
         {/* Section Header */}

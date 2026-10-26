@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className="relative bg-[#000000] pt-24 pb-12 px-6 border-t border-white/10 overflow-hidden">
+    <footer className="relative bg-[#000000] pt-24 pb-12 px-6 md:px-12 lg:px-20 border-t border-white/10 overflow-hidden">
       {/* Premium Ambient Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-gradient-to-t from-purple-900/[0.05] to-transparent blur-[80px] pointer-events-none" />
 

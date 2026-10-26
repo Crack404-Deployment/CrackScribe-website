@@ -74,7 +74,7 @@ export const Reviews = () => {
   }, [isModalOpen]);
 
   return (
-    <section id="reviews" className="py-32 relative z-10 bg-[#000000] overflow-hidden">
+    <section id="reviews" className="py-24 md:py-32 px-6 md:px-12 lg:px-20 relative z-10 bg-[#000000] overflow-hidden">
       
       {/* Dynamic Keyframes for Marquee */}
       <style dangerouslySetInnerHTML={{__html: `

@@ -2,23 +2,42 @@
 @source "../";
 
 :root {
-  --background: #000000;
+  --background: #020a0d; /* Deep teal/black base */
   --foreground: #ffffff;
 }
 
 @layer base {
   body {
     color: var(--foreground);
-    background-color: #000000;
-    background-image: radial-gradient(circle at 50% -20%, #1a1a1a 0%, #000000 70%);
+    /* 1. Shifting deep gradient base */
+    background: linear-gradient(-45deg, #020a0d, #061c24, #01131a, #020a0d);
+    background-size: 400% 400%;
+    animation: smoothBackground 15s ease infinite;
     min-height: 100vh;
     overflow-x: hidden;
+    position: relative;
+  }
+
+  /* 2. Slowly rotating premium aurora glow overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+      radial-gradient(circle at 30% 30%, rgba(0, 240, 181, 0.03), transparent 50%),
+      radial-gradient(circle at 70% 60%, rgba(0, 136, 204, 0.04), transparent 50%);
+    animation: rotateAurora 30s linear infinite;
+    z-index: -999;
+    pointer-events: none;
   }
 }
 
 @layer utilities {
-  .text-gradient-c404 {
-    background: linear-gradient(135deg, #ffffff 0%, #71717a 100%);
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #00f0b5 0%, #0088cc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -47,8 +66,22 @@
   .delay-200 { animation-delay: 200ms; }
   .delay-300 { animation-delay: 300ms; }
   .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
 }
 
+/* Background Animations */
+@keyframes smoothBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes rotateAurora {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Standard Animations */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -62,9 +95,8 @@
 }
 
 @keyframes scan {
-  0% { left: 0%; }
-  50% { left: 100%; }
-  100% { left: 0%; }
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 @keyframes pulse {
