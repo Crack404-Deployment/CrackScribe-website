@@ -7,6 +7,7 @@ import { Reviews } from '@/components/sections/Reviews';
 import { FAQ } from '@/components/sections/FAQ';
 import { Footer } from '@/components/layout/Footer';
 import { Introduction } from '@/components/sections/Introduction';
+import { TargetAudience } from '@/components/sections/TargetAudience';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <MediaShowcase />
         <HowItWorks />
         <Reviews />
+        <TargetAudience />
         <FAQ />
       </main>
       <Footer />

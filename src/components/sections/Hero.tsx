@@ -65,8 +65,17 @@ export const Hero = () => {
   return (
     <section className="relative pt-32 md:pt-40 pb-20 px-6 md:px-12 lg:px-20 min-h-screen overflow-hidden bg-transparent">
       
-      {/* Background Grid & Base Gradient */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_0%,#000_20%,transparent_100%)] -z-10 pointer-events-none"></div>
+      {/* Premium Cinematic Background (Grid boxes removed) */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none -z-20 flex justify-center">
+        {/* Subtle Stardust/Noise Texture for organic feel */}
+        <div className="absolute inset-0 opacity-[0.04] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] mix-blend-screen z-0"></div>
+        
+        {/* Top Radial Bleed - smoothly fades into the global background */}
+        <div className="absolute top-0 w-full h-[50vh] bg-gradient-to-b from-[#061c24]/50 to-transparent z-0"></div>
+        
+        {/* Dynamic Feature Aura - Soft, luxurious glow tracking the active feature */}
+        <div className={`absolute top-[15%] w-[80vw] max-w-[900px] h-[500px] rounded-[100%] blur-[140px] opacity-[0.15] transition-colors duration-1000 ease-in-out ${activeColor} z-10`}></div>
+      </div>
 
       {/* TOP SPLIT HERO AREA */}
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 relative z-10">
@@ -133,9 +142,9 @@ export const Hero = () => {
         {/* Right Column: Visual Showcase */}
         <div className="w-full lg:w-1/2 relative flex items-center justify-center min-h-[500px] animate-fade-in-up delay-300">
           
+          {/* Subtle back-glow for the device */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-40 pointer-events-none -z-10">
             <div className={`absolute top-0 right-0 w-[400px] h-[400px] rounded-full blur-[100px] transition-colors duration-1000 ${activeColor}`}></div>
-            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-purple-600 blur-[100px]"></div>
           </div>
 
           {/* Interactive Smartphone */}
